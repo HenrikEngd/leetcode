@@ -43,7 +43,6 @@ class Solution:
             complement = target - num
             if complement in num_map:
                 return [num_map[complement], i]
-            print(num, i)
             num_map[num] = i
         return []
 
