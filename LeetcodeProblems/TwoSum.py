@@ -27,14 +27,14 @@ from typing import List
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         result = []
-        for i in range(len(nums) - 1): 
+        for i in range(len(nums) - 1):
             for j in range(len(nums) - 1):
                 x = nums[i]
                 y = nums[j+1]
                 if(x + y == target and i != (j+1)):
-                    result.append(i, j+1)
-                    result.append(j+1)  
-                    return result  
+                    result.append(i)
+                    result.append(j+1)
+                    return result
         return result
 
     def twoSumImproved(self, nums: List[int], target: int) -> List[int]:
@@ -52,7 +52,3 @@ nums = [2, 7, 11, 15]
 target = 9
 result = solution.twoSumImproved(nums, target)
 print("Result:", result)
-
-
-
-
